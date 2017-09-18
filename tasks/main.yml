@@ -1,0 +1,91 @@
+
+    - name: Install tor anonymizing overlay network for TCP
+      apt: pkg=tor
+      tags:
+      - security
+      - run
+      become: yes
+
+    - name: Disable tor startup
+      shell: update-rc.d tor disable
+      tags:
+      - security
+      - run
+      become: yes
+
+    - name: Add Penetration Testing Tools apt repository
+      apt_repository: repo="ppa:3lack7ragon/blackdragon-penetration-testing-ppa" update_cache=yes
+      become: yes
+      tags:
+      - security
+      - run
+
+    - name: Install rainbowcrack
+      apt: pkg=rainbowcrack
+      become: yes
+      tags:
+      - security
+      - run
+
+    - name: Install ncrack network authentication cracking tool
+      apt: pkg=ncrack
+      become: yes
+      tags:
+      - security
+      - run
+
+    - name: Install skipfish web application security reconnaissance tool
+      apt: pkg=skipfish
+      become: yes
+      tags:
+      - security
+      - run
+
+    - name: Install Nmap for network discovery and security auditing
+      apt: pkg=nmap
+      become: yes
+      tags:
+      - security
+      - run
+
+    - name: Install dnsmap for brute force DNS name discovery
+      apt: pkg=dnsmap
+      become: yes
+      tags:
+      - security
+      - run
+
+    - name: Install hping3 network smashing tool
+      apt: pkg=hping3
+      become: yes
+      tags:
+      - security
+      - run
+
+    - name: Install netstress network activity benchmarking tool
+      apt: pkg=netstress
+      become: yes
+      tags:
+      - security
+      - run
+
+    - name: Install ApacheBench
+      apt: pkg=apache2-utils
+      become: yes
+      tags:
+      - security
+      - run
+
+    - name: Install aircrack-ng WiFi network security tools
+      apt: pkg=aircrack-ng
+      become: yes
+      tags:
+      - security
+      - run
+
+    - name: Install reaver WiFi Protected Setup Attack Tool
+      apt: pkg=reaver
+      become: yes
+      tags:
+      - security
+      - run
