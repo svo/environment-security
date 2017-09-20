@@ -62,6 +62,13 @@
       - security
       - run
 
+    - name: Install slowhttptest network smashing tool
+      apt: pkg=slowhttptest
+      become: yes
+      tags:
+      - security
+      - run
+
     - name: Install netstress network activity benchmarking tool
       apt: pkg=netstress
       become: yes
