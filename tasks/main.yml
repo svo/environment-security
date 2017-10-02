@@ -90,6 +90,13 @@
       - security
       - run
 
+    - name: Install mitmproxy for interactive examination and modification of HTTP traffic
+      apt: pkg=mitmproxy
+      become: yes
+      tags:
+      - security
+      - run
+
     - name: Install aircrack-ng WiFi network security tools
       apt: pkg=aircrack-ng
       become: yes
