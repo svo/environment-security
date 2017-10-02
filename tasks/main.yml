@@ -55,6 +55,13 @@
       - security
       - run
 
+    - name: Install theHarvester e-mail account and subdomain discovery tool
+      apt: pkg=theharvester
+      become: yes
+      tags:
+      - security
+      - run
+
     - name: Install hping3 network smashing tool
       apt: pkg=hping3
       become: yes
