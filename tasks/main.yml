@@ -90,6 +90,13 @@
       - security
       - run
 
+    - name: Install siege HTTP/HTTPS stress tester
+      apt: pkg=siege
+      become: yes
+      tags:
+      - security
+      - run
+
     - name: Install mitmproxy for interactive examination and modification of HTTP traffic
       apt: pkg=mitmproxy
       become: yes
