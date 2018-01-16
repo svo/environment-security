@@ -41,7 +41,7 @@
       - security
       - run
 
-    - name: Install Nmap for network discovery and security auditing
+    - name: Install nmap for network discovery and security auditing
       apt: pkg=nmap
       become: yes
       tags:
@@ -99,20 +99,6 @@
 
     - name: Install mitmproxy for interactive examination and modification of HTTP traffic
       apt: pkg=mitmproxy
-      become: yes
-      tags:
-      - security
-      - run
-
-    - name: Install aircrack-ng WiFi network security tools
-      apt: pkg=aircrack-ng
-      become: yes
-      tags:
-      - security
-      - run
-
-    - name: Install reaver WiFi Protected Setup Attack Tool
-      apt: pkg=reaver
       become: yes
       tags:
       - security
