@@ -41,6 +41,13 @@
       - security
       - run
 
+    - name: Install Grabber web application scanner
+      apt: pkg=grabber
+      become: yes
+      tags:
+      - security
+      - run
+
     - name: Install nmap for network discovery and security auditing
       apt: pkg=nmap
       become: yes
