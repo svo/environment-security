@@ -48,6 +48,13 @@
       - security
       - run
 
+    - name: Install XSSer to detect, exploit and report on XSS vulnerabilities
+      apt: pkg=xsser
+      become: yes
+      tags:
+      - security
+      - run
+
     - name: Install nmap for network discovery and security auditing
       apt: pkg=nmap
       become: yes
